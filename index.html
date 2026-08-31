@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROBNEY FIGHT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="lobby">
+  <h1>⚔️ ROBNEY FIGHT</h1>
+  <p>READ • PUNISH • DOMINATE</p>
+  <div class="lobbyCard">
+    <input id="playerName" type="text" maxlength="15" placeholder="Your fighter name">
+    <button id="createRoom">CREATE ROOM</button>
+    <div class="or">OR</div>
+    <input id="roomCode" type="text" maxlength="6" placeholder="Room code">
+    <button id="joinRoom">JOIN ROOM</button>
+    <div id="status"></div>
+  </div>
+</div>
+
+<div id="gameScreen" class="hidden">
+  <div id="roomPanel">ROOM: <strong id="liveRoomCode">------</strong> <button id="copyRoom">COPY</button></div>
+  <div class="topBar">
+    <div class="fighterInfo">
+      <span id="p1Name">PLAYER 1</span>
+      <div class="healthBar"><div id="p1Health"></div></div>
+      <div class="momentumBar"><div id="p1Momentum"></div></div>
+    </div>
+    <div class="timer" id="timer">75</div>
+    <div class="fighterInfo right">
+      <span id="p2Name">PLAYER 2</span>
+      <div class="healthBar"><div id="p2Health"></div></div>
+      <div class="momentumBar"><div id="p2Momentum"></div></div>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <div class="controls">
+    <div class="movement">
+      <button id="left">◀</button>
+      <button id="jump">▲</button>
+      <button id="right">▶</button>
+    </div>
+    <div class="moves">
+      <button class="light" id="light">LIGHT</button>
+      <button class="heavy" id="heavy">HEAVY</button>
+      <button class="grab" id="grab">GRAB</button>
+      <button class="block" id="block">BLOCK</button>
+      <button class="dash" id="dash">DASH</button>
+      <button class="overdrive" id="overdrive">⚡ OVERDRIVE</button>
+      <button class="fatality" id="fatality">☠ FATALITY</button>
+    </div>
+  </div>
+  <div id="message"></div>
+</div>
+
+<script type="module" src="game.js"></script>
+</body>
+</html>
